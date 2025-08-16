@@ -301,7 +301,7 @@
                 playerStatus.textContent = `កំពុងបើក​ ${gameState.currentIdx + 1} / ${gameState.players.length}`;
                 const playerNum = gameState.currentIdx + 1;
                 playerLabel.textContent = `អ្នកលេង ${playerNum}`;
-                currentPlayerBig.textContent = `អ្នកលេង ${playerNum}`;
+                currentPlayerBig.textContent = `អ្នកលេងទី ${playerNum}`;
                 roleText.style.opacity = 0;
                 roleText.classList.remove('reveal-effect');
                 maskLayer.style.display = 'flex';
@@ -315,7 +315,7 @@
             suspense.classList.add('hidden');
             endGame.classList.remove('hidden');
             const imposters = gameState.players
-                .map((p, i) => p.role === " Imposter" ? `អ្នកលេង ${i + 1}` : null)
+                .map((p, i) => p.role === " Imposter" ? `អ្នកលេងទី ${i + 1}` : null)
                 .filter(Boolean)
                 .join(' និង ');
             imposterList.textContent = imposters;
